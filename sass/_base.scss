@@ -25,18 +25,18 @@ Grey dark 3: #999
 
 // :root psuedo class is the same as html but with higher specifity
 :root {
-  --primary: #eb2f64;
-  --primary-light: #ff3366;
-  --primary-dark: #ba265d;
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
 
-  --grey-light-1: #faf9f9;
-  --grey-light-2: #f4f2f2;
-  --grey-light-3: #f0eeee;
-  --grey-light-4: #ccc;
-
-  --grey-dark-1: #333;
-  --grey-dark-2: #777;
-  --grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -47,8 +47,8 @@ html {
 body {
   background: linear-gradient(
     to bottom right,
-    var(--primary-light),
-    var(--primary-dark)
+    var(--color-primary-light),
+    var(--color-primary-dark)
   );
   background-repeat: no-repeat;
   background-size: cover;
