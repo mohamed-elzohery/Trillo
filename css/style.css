@@ -137,7 +137,9 @@ body {
   margin: 8rem auto;
   box-shadow: var(--shadow-dark);
   min-height: 100rem;
-  background-color: var(--color-grey-light-1); }
+  background-color: var(--color-grey-light-1);
+  display: flex;
+  flex-direction: column; }
 
 .header {
   font-size: 1.4rem;
@@ -149,7 +151,8 @@ body {
   justify-content: space-between; }
 
 .content {
-  display: flex; }
+  display: flex;
+  flex: 1; }
 
 .aside {
   flex: 0 0 18%;
@@ -157,6 +160,50 @@ body {
 
 .nav {
   width: 100%; }
+  .nav__list {
+    margin-top: 3rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+  .nav__item {
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center; }
+    .nav__item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 100%;
+      top: 0;
+      width: 0.5rem;
+      transform: scaleY(0);
+      background-color: var(--color-primary-light);
+      transition: transform 0.3s ease, width 0.15s 0.3s ease-in;
+      transform-origin: left center;
+      z-index: 10; }
+    .nav__item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
+    .nav__item:not(:last-child) {
+      margin-bottom: 1rem; }
+  .nav__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    z-index: 11;
+    position: relative;
+    padding: 2rem 3rem;
+    display: block;
+    color: currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .nav__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    margin-right: 1.5rem; }
 
 .main {
   background-color: orangered;
