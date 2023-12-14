@@ -1,0 +1,106 @@
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__field {
+    left: 0;
+    transition: 0.2s all;
+    width: 90%;
+    border: none;
+    background-color: var(--color-grey-light-2);
+    font-family: inherit;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    font-size: inherit;
+    color: inherit;
+    display: block;
+    margin-right: -3.25rem;
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+
+      & + button > svg {
+        fill: var(--color-grey-dark-2);
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      font-family: inherit;
+      font-weight: 100;
+      color: var(--color-grey-dark-3);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-grey-dark-3);
+  }
+
+  &__button {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-self: stretch;
+
+  &__link {
+    position: relative;
+    padding: 0 2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: 0.2s all;
+    &:hover {
+      background-color: var(--color-grey-light-2);
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    right: 1.1rem;
+    top: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary-light);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  &__img {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
+
+  &__username {
+    margin-left: 2rem;
+    color: var(--color-primary);
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: inherit;
+  }
+}

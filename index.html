@@ -15,7 +15,47 @@
   </head>
   <body>
     <div class="container">
-      <header class="header" id="header">Header</header>
+      <header class="header" id="header">
+        <img
+          class="logo"
+          src="./img/logo.png"
+          alt="Trillo mark contains two triangles"
+        />
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search Places"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="./img/sprite.svg#icon-magnifying-glass" />
+            </svg>
+          </button>
+        </form>
+        <nav class="user-nav">
+          <a href="#" class="user-nav__link">
+            <svg class="user-nav__icon">
+              <use xlink:href="./img/sprite.svg#icon-bookmark" />
+            </svg>
+            <span class="user-nav__counter">7</span>
+          </a>
+          <a href="#" class="user-nav__link">
+            <svg class="user-nav__icon">
+              <use xlink:href="./img/sprite.svg#icon-chat" />
+            </svg>
+            <span class="user-nav__counter">12</span>
+          </a>
+          <a href="#" class="user-nav__link">
+            <img
+              src="./img/user.jpg"
+              class="user-nav__img"
+              alt="user profile image"
+            />
+            <h3 class="user-nav__username">jonas</h3>
+          </a>
+        </nav>
+      </header>
       <div class="content">
         <aside class="aside">
           <nav class="nav">Side Bar</nav>
