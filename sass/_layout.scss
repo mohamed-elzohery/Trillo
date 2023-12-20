@@ -105,9 +105,6 @@
 
 .paragraph {
   font-size: inherit;
-  &:last-of-type {
-    border-bottom: var(--line);
-  }
 }
 .mb-md {
   margin-bottom: 2rem;
@@ -118,3 +115,12 @@
 }
 
 // Reviews
+.reviews {
+  & > *:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

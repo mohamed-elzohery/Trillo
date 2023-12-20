@@ -206,7 +206,7 @@
   margin-right: 4.5rem;
   flex: 0 0 60%;
   background-color: #fff;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-light);
   padding: 3rem;
   font-size: 1.4rem;
   line-height: 1.6;
@@ -216,6 +216,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: 2rem 0;
+    border-top: var(--line);
+    padding-top: 4rem;
   }
 
   &__item {
@@ -244,6 +246,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: var(--line);
+  padding-top: 2rem;
+
   &__img {
     width: 4rem;
     height: 4rem;
@@ -253,6 +258,64 @@
     &:not(:last-child) {
       margin-right: -2rem;
     }
+  }
+}
+
+.review {
+  & {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 100;
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -9rem;
+    left: -1rem;
+    color: var(--color-grey-light-2);
+    font-size: 20rem;
+    z-index: -1;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &__img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.4rem;
+    line-height: 1.6;
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-3);
+  }
+
+  &__rate {
+    color: var(--color-primary);
+    font-size: 2.25rem;
+    margin-left: auto;
   }
 }
 

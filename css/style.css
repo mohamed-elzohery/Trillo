@@ -34,6 +34,7 @@ Grey dark 3: #999
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06)
   --line: 1px solid var(--color-grey-light-2); }
 
 html {
@@ -205,7 +206,7 @@ body {
   margin-right: 4.5rem;
   flex: 0 0 60%;
   background-color: #fff;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-light);
   padding: 3rem;
   font-size: 1.4rem;
   line-height: 1.6; }
@@ -213,7 +214,9 @@ body {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin: 2rem 0; }
+    margin: 2rem 0;
+    border-top: var(--line);
+    padding-top: 4rem; }
   .description__item {
     margin-bottom: 1rem;
     flex: 0 0 50%; }
@@ -232,7 +235,9 @@ body {
   color: var(--color-grey-dark-3);
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  border-top: var(--line);
+  padding-top: 2rem; }
   .recommendations__img {
     width: 4rem;
     height: 4rem;
@@ -241,6 +246,55 @@ body {
     box-sizing: content-box; }
     .recommendations__img:not(:last-child) {
       margin-right: -2rem; }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 100; }
+
+.review::before {
+  content: "\201C";
+  position: absolute;
+  top: -9rem;
+  left: -1rem;
+  color: var(--color-grey-light-2);
+  font-size: 20rem;
+  z-index: -1; }
+
+.review__user {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem; }
+
+.review__img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%; }
+
+.review__author {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.4rem;
+  line-height: 1.6; }
+
+.review__name {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+.review__date {
+  font-size: 1.2rem;
+  color: var(--color-grey-dark-3); }
+
+.review__rate {
+  color: var(--color-primary);
+  font-size: 2.25rem;
+  margin-left: auto; }
 
 @keyframes pulsate {
   0% {
@@ -334,11 +388,17 @@ body {
 
 .paragraph {
   font-size: inherit; }
-  .paragraph:last-of-type {
-    border-bottom: var(--line); }
 
 .mb-md {
   margin-bottom: 2rem; }
 
 .pb-md {
   padding-bottom: 2rem; }
+
+.reviews {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .reviews > *:not(:last-child) {
+    margin-bottom: 4rem; }
